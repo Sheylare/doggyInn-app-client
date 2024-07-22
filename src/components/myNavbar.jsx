@@ -2,12 +2,13 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
+import logo from "../assets/logo_transparent.png"
 
-function myNavbar() {
+function MyNavbar() {
   return (
     <Navbar>
       <Container>
-        <Navbar.Brand href="#home">Doggy Inn</Navbar.Brand>
+        <Navbar.Brand href="#home"><img src= {logo} alt="logo" width="200px"/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -23,4 +24,4 @@ function myNavbar() {
   );
 }
 
-export default myNavbar;
+export default MyNavbar;
