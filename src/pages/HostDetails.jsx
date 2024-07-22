@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Link } from 'react'
 import {useParams} from "react-router-dom"
 import axios from "axios"
+import Reservation from './Reservation '
 
 function HostDetails() {
 
@@ -42,7 +43,9 @@ function HostDetails() {
       <p>{host.mobile}</p>
       <p>{host.price}</p>
 
+      {/* <Link to={`/hosts/${params.hostId}/reserva`} element={Reservation}>
       <button>Reservar</button>
+      </Link> */}
 
 
     </div>

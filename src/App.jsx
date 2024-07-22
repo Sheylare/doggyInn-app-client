@@ -20,6 +20,9 @@ import NotFound from "./pages/NotFound ";
 
 
 function App() {
+
+  const [hosts, setHosts] = useState(null)
+
   return (
     <>
       <MyNavbar />
@@ -27,8 +30,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
 
-        <Route path="/buscar-hosts" element={<SearchHosts />} />
-        <Route path="/hosts" element={<HostsList />} />
+        <Route path="/buscar-hosts" element={<SearchHosts hosts={hosts} setHosts={setHosts}/>} />
+        <Route path="/hosts" element={<HostsList hosts={hosts} setHosts={setHosts}/>} />
         <Route path="/hosts/:hostId" element={<HostDetails />} />
         <Route path="/hosts/:hostId/reserva" element={<Reservation />} />
         <Route
