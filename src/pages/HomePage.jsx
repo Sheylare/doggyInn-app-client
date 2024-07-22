@@ -25,6 +25,7 @@ function HomePage() {
       </div>
 
       <div className="reserva">
+        
         <h2>
           <b>¿CÓMO RESERVAR?</b>
         </h2>
