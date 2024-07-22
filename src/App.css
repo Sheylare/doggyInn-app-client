@@ -5,3 +5,16 @@
   text-align: center;
 }
 
+.leaflet-container {
+  height: 400px;
+  width: 90mw;
+}
+
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 16px;
+  padding: 12px;
+}
