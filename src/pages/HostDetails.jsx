@@ -38,7 +38,7 @@ function HostDetails() {
       <p>{host.mobile}</p>
       <p>{host.price}</p>
 
-      <Link to={`/hosts/${host.hostId}/reserva`} element={<Reservation />}>
+      <Link to={`/hosts/${host.id}/reserva`} element={<Reservation />}>
         <button>Reservar</button>
       </Link>
     </div>
