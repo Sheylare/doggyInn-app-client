@@ -22,6 +22,7 @@ import NotFound from "./pages/NotFound ";
 function App() {
 
   const [hosts, setHosts] = useState(null)
+  const [reservations, setReservations] = useState(null)
 
   return (
     <>
@@ -29,20 +30,13 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
-
         <Route path="/buscar-hosts" element={<SearchHosts hosts={hosts} setHosts={setHosts}/>} />
         <Route path="/hosts" element={<HostsList hosts={hosts} setHosts={setHosts}/>} />
         <Route path="/hosts/:hostId" element={<HostDetails />} />
         <Route path="/hosts/:hostId/reserva" element={<Reservation />} />
-        <Route
-          path="/hosts/:hostId/reserva-completada"
-          element={<ConfirmedReservation />}
-        />
-        <Route
-          path="/hosts/:hostId/reserva/:reservaId"
-          element={<ReservationDetails />}
-        />
-        <Route path="/reservas" element={<ReservationsList />} />
+        <Route path="/hosts/:hostId/reserva-completada" element={<ConfirmedReservation />}/>
+        <Route path="/reservas/:reservaId" element={<ReservationDetails reservations={reservations} setReservations={setReservations}/>}/>
+        <Route path="/reservas" element={<ReservationsList reservations={reservations} setReservations={setReservations} />} />
         <Route path="/registrar-host" element={<HostRegistration />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
