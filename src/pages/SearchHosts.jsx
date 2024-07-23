@@ -54,7 +54,7 @@ function SearchHosts(props) {
 
           {hosts.map((eachHost) => {
             return (
-          <Marker key={eachHost.id} position={eachHost.adress}> 
+          <Marker key={eachHost.id} position={eachHost.address}> 
            <Popup>
            <Link to={`/hosts/${eachHost.id}`}> 
           <p>Name: <b>{eachHost.name}</b></p>
