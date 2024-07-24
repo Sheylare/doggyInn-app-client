@@ -1,7 +1,10 @@
 import axios from 'axios'
 import React, { useEffect, useState, navigate } from 'react'
-import { Button } from 'react-bootstrap'
 import { useNavigate, useParams } from 'react-router-dom'
+import { Button, Container } from 'react-bootstrap'
+import Form from 'react-bootstrap/Form';
+
+
 
 function EditFormReservation() {
   const params = useParams()
@@ -79,101 +82,123 @@ function EditFormReservation() {
   }
 
   return (
-    <div>
-      <h2>Reservation Details</h2>
-      <form onSubmit={handleFormSubmit}>
-        <label>Which dates?</label>
-        <input
-        type="text"
-        name="From"
-        value={dates}
-        onChange={(e) => setDates(e.target.value)}>
-        </input>
+    <div className='edit-form'>
+    <h2>Reservation Details</h2>
+    <Form onSubmit={handleFormSubmit}>
+      <Form.Group className="mb-3" controlId="dates">
+        <Form.Label>Which dates?</Form.Label>
+        <Form.Control
+          type="text"
+          name="From"
+          value={dates}
+          onChange={(e) => setDates(e.target.value)}
+        />
+      </Form.Group>
 
-        <label>How many dogs?</label>
-        <input
-        type="number"
-        name="Number of dogs"
-        value={quantityDogs}
-        onChange={(e) => setQuantityDogs(e.target.value)}>
-        </input>
+      <Form.Group className="mb-3" controlId="quantityDogs">
+        <Form.Label>How many dogs?</Form.Label>
+        <Form.Control
+          type="number"
+          name="Number of dogs"
+          value={quantityDogs}
+          onChange={(e) => setQuantityDogs(e.target.value)}
+        />
+      </Form.Group>
 
-        <label>Name of your dog</label>
-        <input
-        type="number"
-        name="Brownie"
-        value={dogName}
-        onChange={(e) => setDogName(e.target.value)}>
-        </input>
+      <Form.Group className="mb-3" controlId="dogName">
+        <Form.Label>Name of your dog</Form.Label>
+        <Form.Control
+          type="text"
+          name="Brownie"
+          value={dogName}
+          onChange={(e) => setDogName(e.target.value)}
+        />
+      </Form.Group>
 
-        <label>Size of your dog</label>
-        <input
-        type="text"
-        name="Small/Medium/Large"
-        value={dogSize}
-        onChange={(e) => setDogSize(e.target.value)}>
-        </input>
+      <Form.Group className="mb-3" controlId="dogSize">
+        <Form.Label>Size of your dog</Form.Label>
+        <Form.Control
+          type="text"
+          name="Small/Medium/Large"
+          value={dogSize}
+          onChange={(e) => setDogSize(e.target.value)}
+        />
+      </Form.Group>
 
-        <label>Age of your dog</label>
-        <input
-        type="number"
-        name="1"
-        value={dogAge}
-        onChange={(e) => setDogAge(e.target.value)}>
-        </input>
+      <Form.Group className="mb-3" controlId="dogAge">
+        <Form.Label>Age of your dog</Form.Label>
+        <Form.Control
+          type="number"
+          name="1"
+          value={dogAge}
+          onChange={(e) => setDogAge(e.target.value)}
+        />
+      </Form.Group>
 
-        <label>Allergies?</label>
-        <input
-        type="checkbox"
-        name="Allergies"
-        value={dogAllergies}
-        onChange={(e) => setDogAllergies(e.target.value)}>
-        </input>
+      <Form.Group className="mb-3" controlId="dogAllergies">
+        <Form.Label>Allergies?</Form.Label>
+        <Form.Check
+          type="checkbox"
+          name="Allergies"
+          checked={dogAllergies}
+          onChange={(e) => setDogAllergies(e.target.checked)}
+        />
+      </Form.Group>
 
-        <label>I take my dog's food</label>
-        <input
-        type="checkbox"
-        name="I take my dog's food"
-        value={ownFood}
-        onChange={(e) => setOwnFood(e.target.value)}>
-        </input>
+      <Form.Group className="mb-3" controlId="ownFood">
+        <Form.Label>I take my dog's food</Form.Label>
+        <Form.Check
+          type="checkbox"
+          name="I take my dog's food"
+          checked={ownFood}
+          onChange={(e) => setOwnFood(e.target.checked)}
+        />
+      </Form.Group>
 
-        <label>Aditional notes</label>
-        <input
-        type="text"
-        name="Aditional notes"
-        value={additionalNotes}
-        onChange={(e) => setAdditionalNotes(e.target.value)}>
-        </input>
+      <Form.Group className="mb-3" controlId="additionalNotes">
+        <Form.Label>Aditional notes</Form.Label>
+        <Form.Control
+          type="text"
+          name="Aditional notes"
+          value={additionalNotes}
+          onChange={(e) => setAdditionalNotes(e.target.value)}
+        />
+      </Form.Group>
 
-        <label>Owner's Name</label>
-        <input
-        type="text"
-        name="John"
-        value={ownersName}
-        onChange={(e) => setOwnersName(e.target.value)}>
-        </input>
+      <Form.Group className="mb-3" controlId="ownersName">
+        <Form.Label>Owner's Name</Form.Label>
+        <Form.Control
+          type="text"
+          name="John"
+          value={ownersName}
+          onChange={(e) => setOwnersName(e.target.value)}
+        />
+      </Form.Group>
 
-        <label>Owner's Phone</label>
-        <input
-        type="text"
-        name="+01 234 567 890"
-        value={phone}
-        onChange={(e) => setPhone(e.target.value)}>
-        </input>
+      <Form.Group className="mb-3" controlId="phone">
+        <Form.Label>Owner's Phone</Form.Label>
+        <Form.Control
+          type="text"
+          name="+01 234 567 890"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+        />
+      </Form.Group>
 
-        <label>Owner's Email Address</label>
-        <input
-        type="text"
-        name="john@example.com"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}>
-        </input>
+      <Form.Group className="mb-3" controlId="email">
+        <Form.Label>Owner's Email Address</Form.Label>
+        <Form.Control
+          type="email"
+          name="john@example.com"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+      </Form.Group>
 
-        <Button variant="primary" type="submit">Update Reservation</Button>{" "}
-        </form>
-        <Button onClick={deleteReservation} variant="primary" type="delete">Delete Reservation</Button>{" "}
-    </div>
+      <Button variant="primary" type="submit">Update Reservation</Button>{' '}
+    </Form>
+    <Button onClick={deleteReservation} variant="primary" type="button">Delete Reservation</Button>{' '}
+  </div>
   )
 }
 
