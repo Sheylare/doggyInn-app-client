@@ -66,6 +66,7 @@ function EditFormReservation() {
     }
     try {
       await axios.patch(`${import.meta.env.VITE_SERVER_URL}/reservations/${params.reservaId}`, updatedReservation)
+      navigate("/reservas")
     } catch (error) {
       console.log(error)
     }
@@ -82,7 +83,7 @@ function EditFormReservation() {
 
   return (
     <div className='edit-form'>
-    <h2>Reservation Details</h2>
+    <h2>Edit your reservation</h2>
     <Form onSubmit={handleFormSubmit}>
       <Form.Group className="mb-3" controlId="dates">
         <Form.Label>Which dates?</Form.Label>
