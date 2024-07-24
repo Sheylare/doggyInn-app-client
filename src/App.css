@@ -109,9 +109,46 @@
   color: #777;
 }
 
+.reserve-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgb(241, 238, 238);
+  margin-top: 10px;
+  padding: 20px 0;
+
+}
+
+.reserve-card p {
+  font-size: small;
+}
+
+.reserve-card img {
+  margin-bottom: 30px;
+}
+
 .leaflet-container {
   height: 400px;
   width: 90mw;
+}
+
+.new-host{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: stretch;
+}
+
+.map-form{
+  display: flex;
+  align-self: center;
+  width: 90%;
+  margin: 50px 10px;
+  border: 10px;
+ 
+
 }
 
 .edit-form, .add-form {
@@ -130,11 +167,30 @@
 }
 
 .footer {
+  margin-top: 30px;
   display: flex;
-  margin-top: 20px;
-  padding: 40px;
+  padding: 20px 0;
+  flex-direction: column;
+  justify-content: center;
   background-color: rgb(255, 227, 177);
-  flex-direction: row;
+  font-size: x-small;
   justify-content: baseline;
   align-items: center;
+  width: 100%;
+}
+
+.madeBy {
+  margin-top: 20px;
+}
+
+.madeBy p{
+  margin-bottom: 5px;
+}
+
+.about-us{
+  border: 1px solid black;
+  height: 100%;
+  width: 100%;
+  padding: 60px;
+
 }

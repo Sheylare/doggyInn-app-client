@@ -39,8 +39,9 @@ function HostRegistration() {
   };
 
   return (
-    <div>
+    <div className="new-host">
       <h3>Add Host</h3>
+      <br />
 
       <form onSubmit={handleSubmit}>
         <label>Name:</label>
@@ -50,34 +51,7 @@ function HostRegistration() {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <label>City:</label>
-        <input
-          type="text"
-          name="city"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-        />
-        <label>Address (Latitud, Longiyud):</label>{" "}
-        <input
-          type="text"
-          name="address"
-          value={address.join(",")}
-          onChange={(e) => setAddress(e.target.value)}
-          readOnly
-        />{" "}
-        
-        <div>
-          <label>Select Location:</label>{" "}
-          <LocationPicker onLocationChange={handleLocationChange} />
-        </div>
 
-        <label>Description:</label>
-        <textarea
-          type="text"
-          name="description"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        />
         <label>Email:</label>
         <input
           type="text"
@@ -99,6 +73,33 @@ function HostRegistration() {
           value={price}
           onChange={(e) => setPrice(e.target.value)}
         />
+        <label>Description:</label>
+        <textarea
+          type="text"
+          name="description"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+        />
+        <label>City:</label>
+        <input
+          type="text"
+          name="city"
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+        />
+        <label>Address (Latitud, Longitud):</label>{" "}
+        <input
+          type="text"
+          name="address"
+          value={address.join(",")}
+          onChange={(e) => setAddress(e.target.value)}
+          readOnly
+        />{" "}
+        
+        <div className="map-form">
+          <label>Select Location:</label>{" "}
+          <LocationPicker onLocationChange={handleLocationChange} />
+        </div>
         <button type="submit">Submit</button>
       </form>
     </div>
