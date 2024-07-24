@@ -8,11 +8,15 @@ function HostsList() {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_SERVER_URL}/hosts`)
+      //.get(`${import.meta.env.VITE_SERVER_URL}/hosts`)
+      .get("https://doggy-inn-server.adaptable.app/hosts")
       .then((response) => {
+        console.log(response.data)
         setHosts(response.data);
       })
-      .catch((error) => {});
+      .catch((error) => {
+        console.log(error)
+      });
   }, []);
 
   if (hosts === null) {
