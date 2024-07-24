@@ -5,13 +5,13 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-function SearchHosts(props) {
+function SearchHosts() {
 
   const [center, setCenter] = useState([40.463667, -3.74922]); // coordenadas de vista predeterminada
 
 
-  const {hosts, setHosts} = props
-  // console.log(hosts)
+  const [hosts, setHosts] = useState(null)
+  console.log(hosts)
 
   useEffect(() => {
     axios
@@ -19,7 +19,9 @@ function SearchHosts(props) {
       .then((response) => {
         setHosts(response.data);
       })
-      .catch((error) => {});
+      .catch((error) => {
+        console.log(error)
+      });
   }, []);
 
   if (hosts === null) {
