@@ -39,13 +39,13 @@ function SearchHosts(props) {
           </Link>
         </Form>
       </div>
-      <div id="map">
-        <link
+      {/* <div id="map"> */}
+        {/* <link 
           rel="stylesheet"
           href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
           integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
           crossOrigin=""
-        />
+         /> */}
         <MapContainer center={center} zoom={6} scrollWheelZoom={false}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -67,7 +67,7 @@ function SearchHosts(props) {
           }
 
         </MapContainer>
-      </div>
+      {/* </div> */}
     </>
   );
 }
