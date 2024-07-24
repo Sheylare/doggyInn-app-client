@@ -3,7 +3,7 @@ import React, { useEffect, useState, navigate } from 'react'
 import { Button } from 'react-bootstrap'
 import { useNavigate, useParams } from 'react-router-dom'
 
-function ReservationDetails() {
+function EditFormReservation() {
   const params = useParams()
   const navigate = useNavigate()
 
@@ -177,4 +177,4 @@ function ReservationDetails() {
   )
 }
 
-export default ReservationDetails
+export default EditFormReservation

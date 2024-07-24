@@ -10,7 +10,7 @@ import HostsList from "./pages/HostsList";
 import HostDetails from "./pages/HostDetails";
 import Reservation from "./pages/Reservation ";
 import ConfirmedReservation from "./pages/ConfirmedReservation";
-import ReservationDetails from "./pages/ReservationDetails";
+import EditFormReservation from "./pages/EditFormReservation";
 import ReservationsList from "./pages/ReservationsList";
 import HostRegistration from "./pages/HostRegistration";
 import NotFound from "./pages/NotFound ";
@@ -21,7 +21,7 @@ import NotFound from "./pages/NotFound ";
 
 function App() {
 
-  const [reservations, setReservations] = useState(null)
+ 
 
   return (
     <>
@@ -34,8 +34,8 @@ function App() {
         <Route path="/hosts/:hostId" element={<HostDetails />} />
         <Route path="/hosts/:hostId/reserva" element={<Reservation />} />
         <Route path="/hosts/:hostId/reserva-completada" element={<ConfirmedReservation />}/>
-        <Route path="/reservas/:reservaId" element={<ReservationDetails reservations={reservations} setReservations={setReservations}/>}/>
-        <Route path="/reservas" element={<ReservationsList reservations={reservations} setReservations={setReservations} />} />
+        <Route path="/reservas/:reservaId" element={<EditFormReservation/>}/>
+        <Route path="/reservas" element={<ReservationsList />} />
         <Route path="/registrar-host" element={<HostRegistration />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

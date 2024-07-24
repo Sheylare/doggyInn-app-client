@@ -1,10 +1,10 @@
 import axios from 'axios'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import ReservationCard from '../components/ReservationCard'
 import { useParams } from 'react-router-dom';
 
-function ReservationsList(props) {
-  const {reservations, setReservations} = props
+function ReservationsList() {
+  const [reservations, setReservations] = useState(null)
   console.log (reservations)
 
   useEffect(() => {
