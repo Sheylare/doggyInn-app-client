@@ -63,10 +63,9 @@ function EditFormReservation() {
       ownersName,
       email,
       phone,
-      hostId: Number(params.hostId)
     }
     try {
-      await axios.put(`${import.meta.env.VITE_SERVER_URL}/reservations/${params.reservaId}`, updatedReservation)
+      await axios.patch(`${import.meta.env.VITE_SERVER_URL}/reservations/${params.reservaId}`, updatedReservation)
     } catch (error) {
       console.log(error)
     }
