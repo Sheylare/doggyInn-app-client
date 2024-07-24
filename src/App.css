@@ -1,217 +1,140 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
-.intro{
+.navbar {
+  background-color: white;
+}
+
+.hero-image {
   display: flex;
- background: url("./assets/perrito2.png"); 
+  flex-direction: column;
+  height: 600px;
+  width: 100%;
+  background: linear-gradient(rgba(212, 135, 2, 0.8), rgba(183, 183, 183, 0.8)), url("./assets/perrito2.png");
   background-size: cover;
   background-position: center;
-  height: 450px;
-  width: 100%;
-  
+  justify-content: center;
 }
 
-.home-text{
-  display: flex;
-  flex-direction: column;
- justify-content: center;
-  align-items: center;
+.hero-text {
   text-align: left;
- color: rgb(255, 255, 255);
- padding: 0 10%;
-}
-.reserva{
-text-align: center;
-  margin:40px;
-  padding: 10px;
+  color: rgb(255, 255, 255);
+  padding: 0 10%;
 }
 
-.pasos{
+.hero-text h5{
+  padding: 20px 0;
+}
+
+.reserva {
+  text-align: center;
+  margin: 40px;
+  padding: 40px 20px 20px 20px;
+}
+
+.pasos {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   max-width: 100%;
+  padding: 8px 0;
 }
 
-.servicio-text{
+.servicio-text {
   text-align: center;
-  margin:40px;
+  margin: 40px;
+  padding: 40px 20px 20px 20px;
+}
+
+.step-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 20px;
+  width: 33%;
+  background-color: rgb(250, 181, 62);
+  border-radius: 10px;
+  padding: 12px 12px;
+  margin: 8px;
+}
+
+.servicios {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+.servicio-card {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  width: 33%;
+  border: 1px solid rgb(195, 195, 195);
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+}
+.servicio-card p {
   padding: 20px;
 }
-.step-card{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-right: 20px;
-  width: 33%;
-  background-color: #e5d8e18c;
-  border-radius: 10px;
-  padding: 15px 0;
 
+.host-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
 }
-
-.servicios{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  max-width: 100%;
+.host-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
-.servicio-card{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-right: 20px;
-  width: 33%;
-  background-color: #e5d8e18c;
-  text-align: center;
+.host-card p {
+  margin: 8px 0;
 }
-
-.host-card { 
-  border: 1px solid #ddd; 
-  border-radius: 8px; 
-  padding: 16px; 
-  margin: 16px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  transition: box-shadow 0.3s; 
-} 
-.host-card:hover { 
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
-} 
-.host-card p { 
-  margin: 8px 0; 
-} 
-.host-card .host-name { 
-  font-size: 1.5em; 
-  font-weight: bold; 
-  color: #333; 
-} 
-.host-card .host-price { 
-  font-size: 1.2em; 
-  color: #27ae60; 
-  font-weight: bold; 
-} 
-.host-card .host-details { 
-  color: #777; 
-}  
-
-.intro{
-  display: flex;
- background: url("./assets/perrito2.png"); 
-  background-size: cover;
-  background-position: center;
-  height: 450px;
-  width: 100%;
-  
+.host-card .host-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
 }
-
-.home-text{
-  display: flex;
-  flex-direction: column;
- justify-content: center;
-  align-items: center;
-  text-align: left;
- color: rgb(255, 255, 255);
- padding: 0 10%;
+.host-card .host-price {
+  font-size: 1.2em;
+  color: #27ae60;
+  font-weight: bold;
 }
-.reserva{
-text-align: center;
-  margin:40px;
-  padding: 10px;
+.host-card .host-details {
+  color: #777;
 }
-
-.pasos{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  max-width: 100%;
-}
-
-.servicio-text{
-  text-align: center;
-  margin:40px;
-  padding: 20px;
-}
-.step-card{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-right: 20px;
-  width: 33%;
-  background-color: #e5d8e18c;
-  border-radius: 10px;
-  padding: 15px 0;
-
-}
-
-.servicios{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  max-width: 100%;
-}
-
-.servicio-card{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-right: 20px;
-  width: 33%;
-  background-color: #e5d8e18c;
-  text-align: center;
-}
-
-.host-card { 
-  border: 1px solid #ddd; 
-  border-radius: 8px; 
-  padding: 16px; 
-  margin: 16px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  transition: box-shadow 0.3s; 
-} 
-.host-card:hover { 
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
-} 
-.host-card p { 
-  margin: 8px 0; 
-} 
-.host-card .host-name { 
-  font-size: 1.5em; 
-  font-weight: bold; 
-  color: #333; 
-} 
-.host-card .host-price { 
-  font-size: 1.2em; 
-  color: #27ae60; 
-  font-weight: bold; 
-} 
-.host-card .host-details { 
-  color: #777; 
-}  
 
 .leaflet-container {
   height: 400px;
   width: 90mw;
 }
 
-
-/* form {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 16px;
-  padding: 12px;
-} */
-
-.edit-form{
+.edit-form, .add-form {
   display: flex;
   flex-direction: column;
-  margin: 20px 190px;
-  gap:50px
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
 
+.allergies-ownFood {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+}
 
+.footer {
+  display: flex;
+  margin-top: 20px;
+  padding: 40px;
+  background-color: rgb(255, 227, 177);
+  flex-direction: row;
+  justify-content: baseline;
+  align-items: center;
 }

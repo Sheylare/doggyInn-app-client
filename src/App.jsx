@@ -14,6 +14,7 @@ import EditFormReservation from "./pages/EditFormReservation";
 import ReservationsList from "./pages/ReservationsList";
 import HostRegistration from "./pages/HostRegistration";
 import NotFound from "./pages/NotFound ";
+import Footer from "./components/Footer";
 
 
 
@@ -39,6 +40,7 @@ function App() {
         <Route path="/registrar-host" element={<HostRegistration />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer/>
     </>
   );
 }

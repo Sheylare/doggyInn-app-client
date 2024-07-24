@@ -1,23 +1,26 @@
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
 import React from "react";
 import { Link } from "react-router-dom";
+import paseo from "../assets/paseo.jpg"
+import veterinaria from "../assets/veterinaria.jpg"
+import dogPic from "../assets/dogPic.jpg"
 
 function HomePage() {
   return (
     <div>
-      <div className="intro">
-        <div className="home-text">
+      <div className="hero-image">
+        <div className="hero-text">
           <h1>
             <b>DOGGY INN</b>
           </h1>
-          <p>
+          <h5>
             Doggy Inn es la app perfecta para dueños de perros que buscan
             cuidadores confiables y experimentados. Encuentra cuidadores
             seleccionados en tu área que brindarán a tu mascota la mejor
             atención, desde paseos diarios hasta cuidados durante las
             vacaciones. ¡Descarga Doggy Inn hoy y asegúrate de que tu mejor
             amigo esté en buenas manos!
-          </p>
+          </h5>
           <Link to="/buscar-hosts">
             <Button variant="outline-light">Search Host</Button>
           </Link>
@@ -25,53 +28,56 @@ function HomePage() {
       </div>
 
       <div className="reserva">
-        
         <h2>
-          <b>¿CÓMO RESERVAR?</b>
+          <b>Steps to search a place for my dog</b>
         </h2>
       </div>
 
       <div className="pasos">
         <div className="step-card">
           <h3>
-            <b>PASO 1:</b>
+            <b>Step 1:</b>
           </h3>
-          <p>Busca un host cerca de tu localización</p>
+          <p>Search for a host near you</p>
         </div>
         <div className="step-card">
           <h3>
-            <b>PASO 2:</b>
+            <b>Step 2:</b>
           </h3>
           <p>
-            Una vez que elijas al cuidador de tu confianza, completa el
-            formulario para confirmar tu reserva
+            Once you have chosen the caregiver of your choice, fill in the form
+            to confirm your reservation.
           </p>
         </div>
         <div className="step-card">
           <h3>
-            <b>PASO 3:</b>
+            <b>Step 3:</b>
           </h3>
           <p>
-            Relajate y disfruta de tu viaje con la tranquilidad de saber que tu
-            mejor amigo está bien cuidado
+            Relax and enjoy your trip with peace of mind knowing that your best
+            friend is well cared for.
           </p>
         </div>
       </div>
-      <div className='servicio-text'>
-        <h2>Servicios para tus Perritos</h2>
+      <div className="servicio-text">
+        <h2>
+          <b>Doggie Services</b>
+        </h2>
+      </div>
+      <div className="servicios">
+        <div className="servicio-card">
+          <img src={dogPic} alt="img-dog" width="100%"/>
+          <p>Daily photos to make sure your doggy is doing well</p>
         </div>
-      <div className='servicios'>
-      <div className='servicio-card'>
-        <p>fotos diarias para asegurarte de que tu  perrito esta bien</p>
+        <div className="servicio-card">
+          <img src={veterinaria} alt="img-dog" width="100%"/>
+          <p>Full veterinary coverage</p>
+        </div>
+        <div className="servicio-card">
+          <img src={paseo} alt="img-dog" width="100%"/>
+          <p>Walk at least 3 times a day</p>
+        </div>
       </div>
-      <div className='servicio-card'>
-        <p>cobertura total en veterinaria</p>
-      </div>
-      <div className='servicio-card'>
-        <p>paseos minimo 3 veces al día</p>
-      </div>
-      </div>
-     
     </div>
   );
 }

@@ -1,9 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState, navigate } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { Button, Container } from 'react-bootstrap'
-import Form from 'react-bootstrap/Form';
-
+import { Button, Form } from 'react-bootstrap'
 
 
 function EditFormReservation() {
@@ -46,7 +44,6 @@ function EditFormReservation() {
       console.log(error)
     }
   }
-
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
@@ -136,7 +133,7 @@ function EditFormReservation() {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="dogAllergies">
-        <Form.Label>Allergies?</Form.Label>
+        <Form.Label>Any allergies?</Form.Label>
         <Form.Check
           type="checkbox"
           name="Allergies"
