@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState, navigate } from 'react'
 import { Button } from 'react-bootstrap'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams, Link } from 'react-router-dom'
 
 function ReservationDetails() {
   const params = useParams()
@@ -170,7 +170,7 @@ function ReservationDetails() {
         onChange={(e) => setEmail(e.target.value)}>
         </input>
 
-        <Button variant="primary" type="submit">Update Reservation</Button>{" "}
+        <Link to={"/reservas"}><Button variant="primary" type="submit">Update Reservation</Button>{" "}</Link>
         </form>
         <Button onClick={deleteReservation} variant="primary" type="delete">Delete Reservation</Button>{" "}
     </div>
