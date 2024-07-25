@@ -8,8 +8,6 @@ function ReservationCard(props) {
   const navigate = useNavigate();
   const params = useParams();
 
-  //const [host, setHost] = useState(null);
-
   const {
     id,
     dates,
@@ -22,50 +20,42 @@ function ReservationCard(props) {
     host
   } = props.eachReservation;
 
+
   const deleteReservation = async () => {
+    console.log("tratando de borrar")
     try {
       await axios.delete(
-        `${import.meta.env.VITE_SERVER_URL}/reservations/${params.reservaId}`
-      );
-      navigate("/reservas");
+        `${import.meta.env.VITE_SERVER_URL}/reservations/${id}`
+      )
+      props.getData()
     } catch (error) {
       console.log(error);
     }
   };
 
-  /*useEffect(() => {
-    axios
-      .get(`${import.meta.env.VITE_SERVER_URL}/hosts/${hostId}`)
-      .then((response) => {
-        setHost(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);*/
-
-  /*if (host === null) {
-    return <h2>... Buscando hosts</h2>;
-  }*/
 
   return (
     <div className="reserve-card">
       <Link to={`/reservas/${id}`}>
         <h3>{dogName}</h3>
       </Link>
+      <h6>Dates:</h6>
       <p>{dates}</p>
+      <h6>Dog's Age:</h6>
       <p>{dogAge}</p>
+      <h6>Dog Size:</h6>
       <p>{dogSize}</p>
-      <h6>Dueño/a:</h6>
+      <h6>Owner's Name:</h6>
       <p>{ownerName}</p>
-      <h6>Observaciones:</h6>
+      <h6>Additional Notes:</h6>
       <p>{additionalNotes}</p>
       <img src={perro} alt="silueta" width="100px" />
       <Link to={`/hosts/${hostId}`}>
         <button>
-        {host.name}
+        Host Name: {host.name}
         </button>
       </Link>
+      <br />
       <Button onClick={deleteReservation} variant="primary" type="button">
         Delete Reservation
       </Button>{" "}

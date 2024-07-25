@@ -8,6 +8,10 @@ function ReservationsList() {
   console.log (reservations)
 
   useEffect(() => {
+    getData()
+  }, [])
+
+  const getData = () => {
     axios
     .get(`${import.meta.env.VITE_SERVER_URL}/reservations?_expand=host`)
     .then((response) => {
@@ -15,16 +19,16 @@ function ReservationsList() {
       setReservations(response.data)
     })
     .catch((error) => {console.log(error)})
-  }, [])
+  }
 
   if (reservations === null){
     return <h2>... Searching reservation</h2>;
   }
 
   return (
-    <div className='reservation-container'>
+    <div className='reservation-list-container'>
       {reservations.map((eachReservation) => {
-        return <ReservationCard key={eachReservation.id} eachReservation={eachReservation}/>
+        return <ReservationCard key={eachReservation.id} eachReservation={eachReservation} getData={getData}/>
       })}
     </div>
   )

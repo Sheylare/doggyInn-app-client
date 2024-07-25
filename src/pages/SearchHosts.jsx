@@ -51,7 +51,7 @@ function SearchHosts() {
         </Form>
       </div>
 
-      <MapContainer center={center} zoom={6.3} scrollWheelZoom={false}>
+         <MapContainer center={center} zoom={6.3} scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -74,20 +74,20 @@ function SearchHosts() {
                       Name: <b>{eachHost.name}</b>
                     </p>
                   </Link>
-                  <p>
-                    Price: <b>{eachHost.price}€</b>
-                  </p>
+                  <p>Price: <b>{eachHost.price}€</b></p>
+                  <p><b>{eachHost.city}</b></p>
                 </Popup>
               </Marker>
             );
           })}
       </MapContainer>
+
+     
       <Link to="/hosts">
         <Button variant="primary" type="submit">
           Ver lista de hosts
         </Button>
       </Link>
-      {/* </div> */}
     </div>
   );
 }
