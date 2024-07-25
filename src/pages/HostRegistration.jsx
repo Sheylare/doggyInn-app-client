@@ -39,70 +39,80 @@ function HostRegistration() {
   };
 
   return (
-    <div className="new-host">
-      <h3>Add Host</h3>
-      <br />
-
-      <form onSubmit={handleSubmit}>
-        <label>Name:</label>
-        <input
-          type="text"
-          name="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-
-        <label>Email:</label>
-        <input
-          type="text"
-          name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <label>Phone:</label>
-        <input
-          type="text"
-          name="phone"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-        />
-        <label>Price:</label>
-        <input
-          type="text"
-          name="price"
-          value={price}
-          onChange={(e) => setPrice(e.target.value)}
-        />
-        <label>Description:</label>
-        <textarea
-          type="text"
-          name="description"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        />
-        <label>City:</label>
-        <input
-          type="text"
-          name="city"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-        />
-        <label>Address (Latitud, Longitud):</label>{" "}
-        <input
-          type="text"
-          name="address"
-          value={address.join(",")}
-          onChange={(e) => setAddress(e.target.value)}
-          readOnly
-        />{" "}
-        
-        <div className="map-form">
-          <label>Select Location:</label>{" "}
+    <Container>
+      <h3 className="my-4">Add Host</h3>
+      <Form onSubmit={handleSubmit}>
+        <Form.Group className="mb-3" controlId="formGridName">
+          <Form.Label>Name</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formGridCity">
+          <Form.Label>City</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter city"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formGridAddress">
+          <Form.Label>Address (Latitude, Longitude)</Form.Label>
+          <Form.Control
+            type="text"
+            value={`Lat: ${address[0]}, Lng: ${address[1]}`}
+            readOnly
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formGridLocation">
+          <Form.Label>Select Location</Form.Label>
           <LocationPicker onLocationChange={handleLocationChange} />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formGridDescription">
+          <Form.Label>Description</Form.Label>
+          <Form.Control
+            as="textarea"
+            rows={3}
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formGridEmail">
+          <Form.Label>Email</Form.Label>
+          <Form.Control
+            type="email"
+            placeholder="Enter email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formGridPhone">
+          <Form.Label>Phone</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter phone number"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formGridPrice">
+          <Form.Label>Price</Form.Label>
+          <Form.Control
+            type="number"
+            placeholder="Enter price"
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
+          />
+        </Form.Group>{" "}
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
+    </Container>
   );
 }
 
