@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import axios from 'axios';
-import Reservation from './Reservation ';
+import React, { useEffect, useState } from "react";
+import { useParams, Link } from "react-router-dom";
+import axios from "axios";
+import Reservation from "./Reservation ";
+import { MapContainer, TileLayer, Marker } from "react-leaflet";
 
 function HostDetails() {
   const params = useParams();
@@ -33,10 +34,16 @@ function HostDetails() {
       <p>{host.name}</p>
       <p>{host.description}</p>
       <p>{host.city}</p>
-      <p>{host.adress}</p>
       <p>{host.email}</p>
       <p>{host.mobile}</p>
       <p>{host.price}</p>
+      <MapContainer center={host.address} zoom={13} scrollWheelZoom={false}>
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Marker position={host.address}></Marker>
+      </MapContainer>
 
       <Link to={`/hosts/${host.id}/reserva`} element={<Reservation />}>
         <button>Reservar</button>

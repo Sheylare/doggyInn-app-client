@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function HostCard(props) {
 
-    const {id, name, description, city, email, mobile, price, adress} = props.eachHost
+    const {id, name, description, city,  price} = props.eachHost
 
   return (
     <div className="host-card">

@@ -13,7 +13,8 @@
   flex-direction: column;
   height: 600px;
   width: 100%;
-  background: linear-gradient(rgba(212, 135, 2, 0.8), rgba(183, 183, 183, 0.8)), url("./assets/perrito2.png");
+  background: linear-gradient(rgba(212, 135, 2, 0.8), rgba(183, 183, 183, 0.8)),
+    url("./assets/perrito2.png");
   background-size: cover;
   background-position: center;
   justify-content: center;
@@ -25,7 +26,7 @@
   padding: 0 10%;
 }
 
-.hero-text h5{
+.hero-text h5 {
   padding: 20px 0;
 }
 
@@ -109,7 +110,23 @@
   color: #777;
 }
 
-.reserve-card{
+.search-host-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80vw;
+  gap: 50px;
+}
+
+
+.reservation-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.reserve-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -118,7 +135,7 @@
   background-color: rgb(241, 238, 238);
   margin-top: 10px;
   padding: 20px 0;
-
+  width: 400px;
 }
 
 .reserve-card p {
@@ -130,28 +147,27 @@
 }
 
 .leaflet-container {
-  height: 400px;
+  height: 600px;
   width: 90mw;
 }
 
-.new-host{
+.new-host {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: stretch;
 }
 
-.map-form{
+.map-form {
   display: flex;
   align-self: center;
   width: 90%;
   margin: 50px 10px;
   border: 10px;
- 
-
 }
 
-.edit-form, .add-form {
+.edit-form,
+.add-form {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -183,14 +199,13 @@
   margin-top: 20px;
 }
 
-.madeBy p{
+.madeBy p {
   margin-bottom: 5px;
 }
 
-.about-us{
+.about-us {
   border: 1px solid black;
   height: 100%;
   width: 100%;
   padding: 60px;
-
 }

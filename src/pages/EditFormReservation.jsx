@@ -69,14 +69,6 @@ function EditFormReservation() {
     }
   }
 
-  const deleteReservation = async () => {
-    try {
-      await axios.delete(`${import.meta.env.VITE_SERVER_URL}/reservations/${params.reservaId}`)
-      navigate("/reservas")
-    } catch (error) {
-      console.log(error)
-    }
-  }
 
   return (
     <div className='edit-form'>
@@ -194,7 +186,7 @@ function EditFormReservation() {
 
       <Button variant="primary" type="submit">Update Reservation</Button>{' '}
     </Form>
-    <Button onClick={deleteReservation} variant="primary" type="button">Delete Reservation</Button>{' '}
+   
   </div>
   )
 }
