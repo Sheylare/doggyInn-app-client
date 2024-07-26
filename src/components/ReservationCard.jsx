@@ -1,12 +1,12 @@
-import { React, useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { React } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import perro from "../assets/lab-puppy-silhouette.png";
 import axios from "axios";
 
 function ReservationCard(props) {
-  const navigate = useNavigate();
-  const params = useParams();
+
+ 
 
   const {
     id,
@@ -15,7 +15,7 @@ function ReservationCard(props) {
     dogSize,
     dogAge,
     additionalNotes,
-    ownerName,
+    ownersName,
     hostId,
     host
   } = props.eachReservation;
@@ -46,7 +46,7 @@ function ReservationCard(props) {
       <h6>Dog Size:</h6>
       <p>{dogSize}</p>
       <h6>Owner's Name:</h6>
-      <p>{ownerName}</p>
+      <p>{ownersName}</p>
       <h6>Additional Notes:</h6>
       <p>{additionalNotes}</p>
       <img src={perro} alt="silueta" width="100px" />
