@@ -14,12 +14,11 @@ function HomePage() {
             <b>DOGGY INN</b>
           </h1>
           <h5>
-            Doggy Inn es la app perfecta para dueños de perros que buscan
-            cuidadores confiables y experimentados. Encuentra cuidadores
-            seleccionados en tu área que brindarán a tu mascota la mejor
-            atención, desde paseos diarios hasta cuidados durante las
-            vacaciones. ¡Descarga Doggy Inn hoy y asegúrate de que tu mejor
-            amigo esté en buenas manos!
+            Doggy Inn is the perfect app for dog owners looking for reliable and
+            experienced caregivers. Find vetted caregivers in your area who will
+            provide your pet with the best care, from daily walks to vacation
+            care. Download Doggy Inn today and ensure your best friend is in
+            good hands!
           </h5>
           <Link to="/buscar-hosts">
             <Button variant="outline-light">Search Host</Button>
