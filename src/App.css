@@ -93,11 +93,16 @@
   margin: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s;
-  width: 100vw;
+  width: 90vw;
 }
 
-.host-details-map, .host-info-details {
+.host-details-map{
   width: 400px;
+  text-align: start;
+}
+
+.host-info-details {
+  width: 60%;
   text-align: start;
 }
 
@@ -139,6 +144,15 @@
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
+}
+.search-host-map{
+  width: 85vw;
+}
+
+
+.leaflet-container {
+  height: 600px;
+  width: 100%;
 }
 
 
@@ -195,10 +209,6 @@
 
 /* LEAFLET MAP*/
 
-.leaflet-container {
-  height: 600px;
-  width: 85vw;
-}
 
 
 .new-host {
@@ -237,7 +247,10 @@
 /* ABOUT US */
 
 .about-us {
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 65vh;
   width: 100%;
   padding: 60px;
@@ -253,7 +266,6 @@
   justify-content: center;
   background-color: rgb(255, 227, 177);
   font-size: x-small;
-  justify-content: baseline;
   align-items: center;
   width: 100%;
 }
@@ -278,4 +290,11 @@
   display: flex;
   flex-direction: column;
  justify-content: space-evenly
+}
+
+.img-perritos{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  
 }

@@ -50,39 +50,43 @@ function SearchHosts() {
           />
         </Form>
       </div>
+      <div className="search-host-map">
+        <MapContainer center={center} zoom={6.3} scrollWheelZoom={false}>
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
 
-         <MapContainer center={center} zoom={6.3} scrollWheelZoom={false}>
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-
-        {hosts
-          .filter((eachHost) => {
-            if (city === null) {
-              return true;
-            } else {
-              return eachHost.city.toLowerCase().includes(city.toLowerCase());
-            }
-          })
-          .map((eachHost) => {
-            return (
-              <Marker key={eachHost.id} position={eachHost.address}>
-                <Popup>
-                  <Link to={`/hosts/${eachHost.id}`}>
+          {hosts
+            .filter((eachHost) => {
+              if (city === null) {
+                return true;
+              } else {
+                return eachHost.city.toLowerCase().includes(city.toLowerCase());
+              }
+            })
+            .map((eachHost) => {
+              return (
+                <Marker key={eachHost.id} position={eachHost.address}>
+                  <Popup>
+                    <Link to={`/hosts/${eachHost.id}`}>
+                      <p>
+                        Name: <b>{eachHost.name}</b>
+                      </p>
+                    </Link>
                     <p>
-                      Name: <b>{eachHost.name}</b>
+                      Price: <b>{eachHost.price}€</b>
                     </p>
-                  </Link>
-                  <p>Price: <b>{eachHost.price}€</b></p>
-                  <p><b>{eachHost.city}</b></p>
-                </Popup>
-              </Marker>
-            );
-          })}
-      </MapContainer>
+                    <p>
+                      <b>{eachHost.city}</b>
+                    </p>
+                  </Popup>
+                </Marker>
+              );
+            })}
+        </MapContainer>
+      </div>
 
-     
       <Link to="/hosts">
         <Button variant="primary" type="submit">
           Ver lista de hosts
