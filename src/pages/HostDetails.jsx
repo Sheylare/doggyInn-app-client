@@ -17,7 +17,7 @@ function HostDetails() {
       const response = await axios.get(
         `${import.meta.env.VITE_SERVER_URL}/hosts/${params.hostId}`
       );
-      console.log(response.data);
+      
       setHost(response.data);
     } catch (error) {
       console.error(error);

@@ -1,4 +1,8 @@
 import React from "react";
+import dog1 from "../assets/mufasa.jpg"
+import dog2 from "../assets/milka.jpg"
+import dog3 from "../assets/gorda.jpg"
+
 
 function About() {
   return (
@@ -19,6 +23,13 @@ function About() {
           perros con cuidadores verificados y apasionados, asegurando que tu
           amigo peludo reciba el mejor cuidado posible mientras estás fuera.
         </p>
+      </div>
+
+      <div>
+        <img src={dog1} alt=""  width="100px"/>
+        <img src={dog2} alt=""  width="100px"/>
+        <img src={dog3} alt=""  width="100px"/>
+       
       </div>
     </div>
   );

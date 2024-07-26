@@ -1,9 +1,9 @@
 import Button from "react-bootstrap/Button";
 import React from "react";
 import { Link } from "react-router-dom";
-import paseo from "../assets/paseo.jpg"
-import veterinaria from "../assets/veterinaria.jpg"
-import dogPic from "../assets/dogPic.jpg"
+import paseo from "../assets/paseo.jpg";
+import veterinaria from "../assets/veterinaria.jpg";
+import dogPic from "../assets/dogPic.jpg";
 
 function HomePage() {
   return (
@@ -66,15 +66,15 @@ function HomePage() {
       </div>
       <div className="servicios">
         <div className="servicio-card">
-          <img src={dogPic} alt="img-dog" width="100%"/>
+          <img src={dogPic} alt="img-dog" width="100%" />
           <p>Daily photos to make sure your doggy is doing well</p>
         </div>
         <div className="servicio-card">
-          <img src={veterinaria} alt="img-dog" width="100%"/>
+          <img src={veterinaria} alt="img-dog" width="100%" />
           <p>Full veterinary coverage</p>
         </div>
         <div className="servicio-card">
-          <img src={paseo} alt="img-dog" width="100%"/>
+          <img src={paseo} alt="img-dog" width="100%" />
           <p>Walk at least 3 times a day</p>
         </div>
       </div>
