@@ -2,6 +2,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+
 }
 
 .navbar {
@@ -13,7 +14,8 @@
   flex-direction: column;
   height: 600px;
   width: 100%;
-  background: linear-gradient(rgba(212, 135, 2, 0.8), rgba(183, 183, 183, 0.8)), url("./assets/perrito2.png");
+  background: linear-gradient(rgba(212, 135, 2, 0.8), rgba(183, 183, 183, 0.8)),
+    url("./assets/perrito2.png");
   background-size: cover;
   background-position: center;
   justify-content: center;
@@ -25,14 +27,8 @@
   padding: 0 10%;
 }
 
-.hero-text h5{
+.hero-text h5 {
   padding: 20px 0;
-}
-
-.reserva {
-  text-align: center;
-  margin: 40px;
-  padding: 40px 20px 20px 20px;
 }
 
 .pasos {
@@ -61,6 +57,8 @@
   margin: 8px;
 }
 
+/* SERVICES */
+
 .servicios {
   display: flex;
   flex-direction: row;
@@ -80,6 +78,30 @@
 .servicio-card p {
   padding: 20px;
 }
+
+/* HOST DETAILS */
+
+.host-details-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 10px;
+  flex-wrap: wrap;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 40px;
+  margin: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+  width: 100vw;
+}
+
+.host-details-map, .host-info-details {
+  width: 400px;
+  text-align: start;
+}
+
+/* HOST CARD */
 
 .host-card {
   border: 1px solid #ddd;
@@ -109,16 +131,58 @@
   color: #777;
 }
 
-.reserve-card{
+/* SEARCH HOST*/
+
+.search-host-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+
+
+
+/* RESERVATION*/
+
+.reservation-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.reserva {
+  text-align: center;
+  margin: 40px;
+  padding: 40px 20px 20px 20px;
+}
+
+.reservation-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  min-height: 65vh;
+}
+
+/* RESERVATION CARD */
+
+.reserve-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid black;
-  border-radius: 5px;
-  background-color: rgb(241, 238, 238);
-  margin-top: 10px;
-  padding: 20px 0;
-
+  width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 24px 16px;
+  margin: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+.reserve-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .reserve-card p {
@@ -129,29 +193,33 @@
   margin-bottom: 30px;
 }
 
+/* LEAFLET MAP*/
+
 .leaflet-container {
-  height: 400px;
-  width: 90mw;
+  height: 600px;
+  width: 85vw;
 }
 
-.new-host{
+
+.new-host {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: stretch;
 }
 
-.map-form{
+/* ADD RESERVATION FORM */
+
+.map-form {
   display: flex;
   align-self: center;
   width: 90%;
   margin: 50px 10px;
   border: 10px;
- 
-
 }
 
-.edit-form, .add-form {
+.edit-form,
+.add-reservation-form {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -165,6 +233,17 @@
   gap: 50px;
   justify-content: center;
 }
+
+/* ABOUT US */
+
+.about-us {
+  border: 1px solid black;
+  min-height: 65vh;
+  width: 100%;
+  padding: 60px;
+}
+
+/* FOOTER */
 
 .footer {
   margin-top: 30px;
@@ -183,14 +262,20 @@
   margin-top: 20px;
 }
 
-.madeBy p{
+.madeBy p {
   margin-bottom: 5px;
 }
 
-.about-us{
-  border: 1px solid black;
-  height: 100%;
-  width: 100%;
-  padding: 60px;
-
+.not-found{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 65vh;
+}
+.confirmation{
+  min-height: 55vh;
+  display: flex;
+  flex-direction: column;
+ justify-content: space-evenly
 }

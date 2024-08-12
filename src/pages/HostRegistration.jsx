@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import LocationPicker from "../components/locationHost";
-import { Container, Button, Form } from "react-bootstrap";
 
 function HostRegistration() {
   const navigate = useNavigate();

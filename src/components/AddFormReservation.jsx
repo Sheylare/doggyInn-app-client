@@ -50,7 +50,7 @@ function AddFormReservation(props) {
   };
 
   return (
-    <div className="add-form">
+    <div className="add-reservation-form">
       <h2>Make your reservation</h2>
       <p>Please fill out the form below to make your reservation</p>
       <Form onSubmit={handleSubmit}>

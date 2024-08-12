@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 
 function ConfirmedReservation() {
   return (
-    <div>
+    <div className="confirmation">
       <h2>The reserve is completed!</h2>
+      <br />
       <Link to={"/reservas"}>
         <button>All reservations</button>
       </Link>
