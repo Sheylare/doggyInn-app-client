@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import Reservation from "./Reservation ";
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
+import { Spinner } from "react-bootstrap";
 
 function HostDetails() {
   const params = useParams();
@@ -25,7 +26,12 @@ function HostDetails() {
   };
 
   if (host === null) {
-    return <h2>... Buscando Host</h2>;
+    return (
+      <Spinner animation="border" role="status">
+        <span className="visually-hidden">Loading Data</span>
+        <h3>This is taking a bit longer than usual, hang tight…</h3>
+      </Spinner>
+    );
   }
 
   return (

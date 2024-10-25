@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { Link, useSearchParams } from "react-router-dom";
 import axios from "axios";
+import { Spinner } from "react-bootstrap";
 
 function SearchHosts() {
   const [queries, setQueries] = useSearchParams();
@@ -27,7 +28,13 @@ function SearchHosts() {
   }, []);
 
   if (hosts === null) {
-    return <h2>... Buscando hosts</h2>;
+    return (
+    <Spinner animation="border" role="status">
+      <span className="visually-hidden">Loading Data</span>
+      <h3>This is taking a bit longer than usual, hang tight…</h3>
+    </Spinner>
+ )
+     
   }
 
   const handleChangeCity = (e) => {
