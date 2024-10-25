@@ -21,7 +21,12 @@ function ReservationsList() {
   };
 
   if (reservations === null) {
-    return <h2>... Searching reservation</h2>;
+    return (
+      <Spinner animation="border" role="status">
+        <span className="visually-hidden">Loading Reservation</span>
+        <h3>This is taking a bit longer than usual, hang tight…</h3>
+      </Spinner>
+    );
   }
 
   return (

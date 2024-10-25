@@ -19,7 +19,12 @@ function HostsList() {
   }, []);
 
   if (hosts === null) {
-    return <h2>... Buscando hosts</h2>;
+    return (
+      <Spinner animation="border" role="status">
+        <span className="visually-hidden">Loading Data</span>
+        <h3>This is taking a bit longer than usual, hang tight…</h3>
+      </Spinner>
+    );
   }
 
   return (
